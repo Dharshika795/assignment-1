@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Learn <label> for accessibility and placeholder for hints. Connect labels with inputs using for and id.-->
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form Example</title>
+</head>
+<body>
+
+    <h2>User Information Form</h2>
+
+    <form>
+        
+        <!-- Text input with label and placeholder -->
+        <label for="Name">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="100"><br><br>
+        <label for="feedback">Your Feedback:</label><br>
+        <textarea id="feedback" name="feedback" placeholder="Write your comments here..." rows="4" cols="30"></textarea><br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
