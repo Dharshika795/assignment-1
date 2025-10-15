@@ -1,0 +1,27 @@
+h1{
+    
+    font-weight: 500px;
+    font-size: 100px;
+    color: aqua;
+    background-color: brown;
+    font-size:xx-large;
+    padding: 15px;
+    margin: 50px;
+    text-align: center; 
+}
+.p1{
+    font-size: xx-large;
+}
+h2{
+    font-weight: 500px;
+    font-size: 100px;
+    color: green;
+    background-color: burlywood;
+    font-size:xx-large;
+    padding: 15px;
+    margin: 50px;
+    text-align: center;
+}
+.p2{
+    font-size:xx-large;
+}
