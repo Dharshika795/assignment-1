@@ -33,3 +33,90 @@
 .bannertext h2 {
   color: #ffb6c1;
 }
+.box{
+    border: 5px solid rgb(24, 43, 34);
+    padding: 10px;
+    margin: 10px;
+}
+.relative{
+        position: relative;
+        left: 100px;
+        background-color: rgb(205, 41, 117);
+}
+.absolute{
+    position: absolute;
+    right: 60px;
+    background-color: rgb(105, 168, 168);
+}
+.fixed{
+    position: fixed;
+    background-color: rgb(115, 77, 30);
+}
+.referenece{
+    background-color: lightgray;
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .hero {
+    background: url('https://www.businesstoday.in/visualstories/entertainment/thalapathy-vijay-the-goat-of-tamil-cinema-his-net-worth-fees-earnings-luxury-cars-and-more-169212-09-09-2024')
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-text {
+    background-color: rgba(58, 121, 210, 0.5); 
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .hero-text h1 {
+    margin: 0 0 15px;
+    font-size: 40px;
+  }
+
+  .hero-text p {
+    margin: 0 0 20px;
+    font-size: 18px;
+  }
+
+  .hero-text button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    background-color: #2575fc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.about{
+    letter-spacing:2px;
+    word-spacing: 3px;
+    color: rgb(0, 0, 1);
+    background-color: rgb(101, 187, 100);
+}
+.Sticky h1{
+  margin: 0 0 15px;
+    font-size: 40px;
+    color: #d0e4e7;
+
+}
+.Sticky{
+
+    text-align: center;
+    color: rgb(205, 208, 210);
+    background-color: #222021;
+    letter-spacing:2px;
+    word-spacing: 3px;
+
+}
+
+  
+
+ 
