@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Create a full-page layout with header, nav, main, aside, and footer using grid-template-areas.-->
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Page Layout with Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fa;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "aside main"
+        "footer footer";
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: #2575fc;
+      color: white;
+    }
+
+    main {
+      grid-area: main;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+
+    aside {
+      grid-area: aside;
+      background: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      grid-area: footer;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 14px;
+    }   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>🌐 My Website Header</header>
+    
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <main>
+      <h2>Main Content Area</h2>
+      <p>
+        Welcome to my page! This is where your main content goes. 
+        You can add text, images, or anything else you want here.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dignissimos, minima. Eveniet, odit. Hic aspernatur alias 
+        laudantium exercitationem voluptatum voluptas dicta?
+      </p>
+    </main>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>Extra information or links can go here.</p>
+    </aside>
+
+    <footer>© 2025 My Website | Designed by Dharshika</footer>
+  </div>
+</body>
+</html>
+
+</body>
+</html>

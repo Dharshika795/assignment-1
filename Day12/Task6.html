@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Responsive 3-column layout using Flexbox -->
+<div class="container">
+  <div class="column">Column 1<br>Some content here...</div>
+  <div class="column">Column 2<br>Some content here...</div>
+  <div class="column">Column 3<br>Some content here...</div>
+</div>
+<style>
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  gap: 20px;
+  padding: 20px;
+}
+
+.column {
+  background: #ffe0ec;
+  flex: 1 1 300px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+</style>
+</body>
+</html>
