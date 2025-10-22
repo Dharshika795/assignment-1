@@ -1,0 +1,35 @@
+.Gradient {
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner {
+  background: url('https://images.unsplash.com/photo-1522205408450-add114ad53fe') center/cover fixed;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.nav a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #290d12;
+}
+
+.bannertext {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 30px 50px;
+  border-radius: 15px;
+}
+
+.bannertext h2 {
+  color: #ffb6c1;
+}
