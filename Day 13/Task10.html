@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Create a page where the background color changes at 600px and 900px.-->
+</head>
+<body>
+    <style>
+  body {
+    background-color: pink;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+  }
+
+  @media (min-width: 600px) {
+    body {
+      background-color: orange;
+    }
+  }
+
+  @media (min-width: 900px) {
+    body {
+      background-color: purple;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Resize to change background!</h1>
+</body>
+</html>

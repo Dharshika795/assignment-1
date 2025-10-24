@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Use em and rem units for text sizing and compare results.-->
+</head>
+<body>
+<style>
+  html {
+    font-size: 16px; /* Base font size */
+  }
+
+  .parent {
+    font-size: 1.5em; /* 1.5 × base = 24px */
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .child-em {
+    font-size: 2em; /* 2 × parent size = 48px */
+    color: teal;
+  }
+
+  .child-rem {
+    font-size: 2rem; /* 2 × root size = 32px */
+    color: tomato;
+  }
+</style>
+</head>
+<body>
+  <div class="parent">
+    <p class="child-em">This text uses <b>em</b> units (scales with parent)</p>
+    <p class="child-rem">This text uses <b>rem</b> units (scales with root)</p>
+  </div>
+
+
+</body>
+</html>

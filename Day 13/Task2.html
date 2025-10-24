@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .column {
+    flex: 1;
+    padding: 20px;
+    color: white;
+  }
+
+  .left {
+    background-color: teal;
+  }
+
+  .right {
+    background-color: tomato;
+  }
+
+  /* Stack columns on mobile */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="column left">Left Column</div>
+    <div class="column right">Right Column</div>
+  </div>
+</body>
+</html>
