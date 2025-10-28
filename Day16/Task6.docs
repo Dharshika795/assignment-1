@@ -1,0 +1,41 @@
+ Key Points About JavaScript (JS):
+ 
+ 1. JavaScript was created in 1995 by Brendan Eich at Netscape to make web pages interactive.
+
+2. Its original name was Mocha, then LiveScript, before finally being renamed to JavaScript.
+
+3. JavaScript is a high-level, interpreted programming language that runs in the browser.
+
+4. Microsoft created its own version called JScript for Internet Explorer in 1996.
+
+5. ECMAScript (ES) is the standardized version of JavaScript, maintained by ECMA International.
+
+6. ES1 was released in 1997, marking the official standardization of JavaScript.
+
+7. ES3 (1999) introduced regular expressions, better string handling, and exception handling.
+
+8. AJAX (2005) allowed web pages to load data asynchronously without reloading the page.
+
+9. jQuery, released in 2006, simplified DOM manipulation and cross-browser coding.
+
+10. Node.js, introduced in 2009, allowed JavaScript to run on the server side.
+
+11. ES5 (2009) added strict mode, JSON support, and useful array methods like map() and filter().
+
+12. ES6 (2015) brought major features such as let, const, arrow functions, classes, and modules.
+
+13. Frameworks like React, Angular, and Vue.js made JavaScript ideal for building web apps.
+
+14. TypeScript, a superset of JavaScript, added type safety and became popular for large projects.
+
+15. JavaScript supports asynchronous programming using promises and async/await.
+
+16. Modern runtimes like Deno and Bun aim to make JavaScript development faster and safer.
+
+17. JavaScript can now run on mobile, desktop, and IoT devices besides browsers.
+
+18. ES2022 introduced features like top-level await and private class fields.
+
+19. JavaScript is the core of front-end development, powering interactive web experiences.
+
+20. As of 2025, JavaScript remains one of the most widely used programming languages worldwide.
