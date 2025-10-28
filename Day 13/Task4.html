@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Create a section that uses vh and vw for full-screen layout-->
+  <title>Full Screen Layout</title>
+  <style>
+    section {
+      width: 100vw;      
+      height: 100vh;     
+      background-color: lightseagreen;
+      color: white;
+      display: flex;         
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .second {
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>This section fills the entire screen (100vw x 100vh)</h1>
+  </section>
+
+  <section class="second">
+    <h1>Scroll down to see the next full-screen section</h1>
+  </section>
+</body>
+</html>

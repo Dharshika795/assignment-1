@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Use Flexbox with min-width queries to switch between horizontal and vertical layout.-->
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Flex container */
+    .container {
+      display: flex;
+      flex-direction: column; /* Vertical by default */
+      min-height: 100vh;
+    }
+
+    .box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .box1 { background-color: lightcoral; }
+    .box2 { background-color: lightseagreen; }
+    .box3 { background-color: lightskyblue; }
+
+    @media (min-width: 600px) {
+      .container {
+        flex-direction: row; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+</body>
+</html>
