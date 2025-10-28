@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Box Style */
+.color-box {
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+  border-radius: 10px;
+  transition: background-color 0.6s ease; /* Smooth color transition */
+}
+
+/* Hover Effect */
+.color-box:hover {
+  background-color: lightseagreen;
+}

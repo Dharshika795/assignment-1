@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.smooth-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.smooth-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.smooth-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px #007bff;
+}
