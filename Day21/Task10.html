@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products List</title>
+  <!--Create an array of products and display all names dynamically using forEach() in HTML.-->
+</head>
+<body>
+  <h2>Product Names</h2>
+  <div id="output"></div>
+
+  <script>
+    // Create an array of product names
+    let products = ["Book", "Pen", "Bag", "Bottle", "Watch"];
+
+    // Get the div where we will show the products
+    let output = document.getElementById("output");
+
+    // Use forEach to add each product name
+    products.forEach(function(product) {
+      output.innerHTML += product + "<br>";
+    });
+  </script>
+</body>
+</html>
