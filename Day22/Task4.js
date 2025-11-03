@@ -1,0 +1,13 @@
+//Create a class Employee with name and salary — add a method to display info.
+class Employee {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+  displayInfo() {
+    console.log(`Employee Name: ${this.name}`);
+    console.log(`Salary:${this.salary}`);
+  }
+}
+let emp1 = new Employee("Dharshika", 50000);
+emp1.displayInfo();
