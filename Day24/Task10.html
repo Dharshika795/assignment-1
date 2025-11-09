@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <!--Combine DOM Events and error handling to make a secure login form.-->
+<body>
+
+<h3>Simple Login Form</h3>
+
+<form onsubmit="event.preventDefault(); checkLogin();">
+  <input id="name" placeholder="Enter username"><br><br>
+  <input id="pwd" type="password" placeholder="Enter password"><br><br>
+  <button type="submit">Login</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function checkLogin() {
+  try {
+    let name = document.getElementById("name").value;
+    let pwd = document.getElementById("pwd").value;
+
+    if (!name || !pwd) {
+      throw "Fields cannot be empty!";
+    }
+
+    if (name === "user" && pwd === "1234") {
+      document.getElementById("result").textContent = "Welcome, " + name + "!";
+      document.getElementById("result").style.color = "green";
+    } else {
+      throw "Invalid login details!";
+    }
+  } 
+  catch (err) {
+    document.getElementById("result").textContent = err;
+    document.getElementById("result").style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<!--Create a button that, when clicked, changes a color — and if element not found, catches the error.-->
+<body>
+
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeColor() {
+  try {
+    let box = document.getElementById("box"); // element not found
+    box.style.backgroundColor = "lightgreen";
+  } catch (err) {
+    alert("Error: Element not found!");
+  }
+}
+</script>
+
+</body>
+</html>

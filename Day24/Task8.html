@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <!--Make a “safe calculator” that throws an error when dividing by zero.-->
+<body>
+
+<script>
+function divide(a, b) {
+  if (b === 0) throw "Cannot divide by zero!";
+  return a / b;
+}
+
+try {
+  let result = divide(10, 0);
+  alert("Result: " + result);
+} catch (err) {
+  alert("Error: " + err);
+}
+</script>
+
+</body>
+</html>

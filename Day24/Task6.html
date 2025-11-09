@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <!--Create a simple form validation system that uses try...catch.-->
+<body>
+
+<form onsubmit="event.preventDefault(); validateForm();">
+  <input id="name" placeholder="Enter your name">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+  try {
+    let name = document.getElementById("name").value;
+    if (name === "") throw "Name cannot be empty!";
+    alert("Form submitted successfully!");
+  } catch (err) {
+    alert("Error: " + err);
+  }
+}
+</script>
+
+</body>
+</html>
