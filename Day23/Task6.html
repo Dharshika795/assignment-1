@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <!--Build a “Dark Mode” button that toggles page colors.-->
+<body>
+<button onclick="toggleMode()">Dark Mode</button>
+<script>
+function toggleMode() {
+  document.body.style.backgroundColor =
+    document.body.style.backgroundColor === "black" ? "white" : "black";
+  document.body.style.color =
+    document.body.style.color === "white" ? "black" : "white";
+}
+</script>
+
+</body>
+</html>

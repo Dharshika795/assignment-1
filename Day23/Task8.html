@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <!--Make a “To-Do List” app using appendChild() and removeChild().-->
+<body>
+
+<h2>To-Do List</h2>
+<input id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+<ul id="list"></ul>
+
+<script>
+function addTask() {
+  let input = document.getElementById("taskInput");
+  let list = document.getElementById("list");
+
+  if (input.value === "") return;  
+  let li = document.createElement("li");
+  li.textContent = input.value;
+
+  let btn = document.createElement("button");
+  btn.textContent = "Remove";
+  btn.onclick = function() {
+    list.removeChild(li);
+  };
+
+  li.appendChild(btn);     
+  list.appendChild(li);    
+  input.value = "";        
+}
+</script>
+
+</body>
+</html>
