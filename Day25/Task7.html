@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <!--Write a form validation script that uses try...catch for missing fields.-->
+<body>
+<input id="name" placeholder="Enter name">
+<button onclick="checkForm()">Submit</button>
+<script>
+function checkForm() {
+  try {
+    let name = document.getElementById("name").value;
+    if (name === "") throw "Name is required!";
+    alert("Form submitted!");
+  } catch (err) {
+    alert(err);
+  }
+}
+</script>
+
+</body>
+</html>

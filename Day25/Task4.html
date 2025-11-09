@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <!--Create custom error messages for invalid name or email input.-->
+<body>
+<script>
+function validate(name, email) {
+  if (name === "") throw "Name cannot be empty!";
+  if (!email.includes("@")) throw "Invalid email!";
+  alert("All good!");
+}
+try {
+  validate("", "testmail.com");
+} catch (err) {
+  alert(err);
+}
+</script>
+
+</body>
+</html>

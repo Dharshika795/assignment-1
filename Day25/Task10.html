@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <!--Combine all: validate input, throw error if invalid, catch it, and log result in finally.-->
+<body>
+<h3>Check Age</h3>
+<input id="age" placeholder="Enter your age">
+<button onclick="checkAge()">Check</button>
+<script>
+function checkAge() {
+  try {
+    let age = document.getElementById("age").value;
+
+    if (age === "") throw "Age is required!";
+    if (isNaN(age)) throw "Enter a valid number!";
+    if (age < 18) throw "You are underage!";
+    
+    alert("Access granted!");
+  } 
+  catch (err) {
+    alert("Error: " + err);
+  } 
+  finally {
+    console.log("Code executed.");
+  }
+}
+</script>
+
+</body>
+</html>
+

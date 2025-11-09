@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--Write a function that throws an error if the number is negative.-->
+<script>
+function checkNumber(num) {
+  if (num < 0) throw "Negative number not allowed!";
+  alert("Number is positive!");
+}
+try {
+  checkNumber(-3);
+} catch (err) {
+  alert(err);
+}
+</script>
+
+</body>
+</html>

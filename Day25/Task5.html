@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <!--Use throw to reject numbers greater than 100.-->
+<body>
+<script>
+function checkValue(num) {
+  if (num > 100) throw "Number too large!";
+  alert("Number is okay!");
+}
+
+try {
+  checkValue(150);
+} catch (err) {
+  alert(err);
+}
+</script>
+</body>
+</html>

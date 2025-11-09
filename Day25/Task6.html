@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <!--Create a divide(a, b) function that throws an error if b = 0.-->
+<body>
+<script>
+function divide(a, b) {
+  if (b === 0) throw "Cannot divide by zero!";
+  return a / b;
+}
+
+try {
+  alert(divide(10, 0));
+} catch (err) {
+  alert(err);
+}
+</script>
+
+</body>
+</html>

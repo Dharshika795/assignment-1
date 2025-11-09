@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<!--Create a simple “Age Check” function with custom error for underage users.-->
+<body>
+<script>
+function checkAge(age) {
+  if (age < 18) throw "You are underage!";
+  alert("Access granted!");
+}
+try {
+  checkAge(15);
+} catch (err) {
+  alert(err);
+}
+</script>
+
+</body>
+</html>
