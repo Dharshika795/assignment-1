@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Location</title>
+</head>
+<body>
+
+  <h2>Your Current Location</h2>
+  <p id="lat"></p>
+  <p id="lon"></p>
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showLocation, showError);
+      } else {
+        document.getElementById("error").textContent = "Geolocation is not supported";
+      }
+    }
+
+    function showLocation(position) {
+      document.getElementById("lat").textContent = "Latitude: " + position.coords.latitude;
+      document.getElementById("lon").textContent = "Longitude: " + position.coords.longitude;
+    }
+
+    function showError() {
+      document.getElementById("error").textContent = "Unable to fetch location.";
+    }
+
+    getLocation();
+  </script>
+
+</body>
+</html>

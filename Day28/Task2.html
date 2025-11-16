@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Session Time Example</h2>
+<p id="time"></p>
+
+<script>
+  let currentTime = new Date().toLocaleString();
+  sessionStorage.setItem("sessionTime", currentTime);
+
+  document.getElementById("time").textContent =
+    "Session Time: " + sessionStorage.getItem("sessionTime");
+</script>
+
+</body>
+</html>

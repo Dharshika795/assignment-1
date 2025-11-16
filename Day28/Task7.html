@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Saver</title>
+</head>
+<body>
+  <h2>Your Current Location</h2>
+
+  <p id="lat">Latitude: </p>
+  <p id="lon">Longitude: </p>
+
+  <button id="saveBtn">Save Location</button>
+  <p id="savedMsg" style="color: green;"></p>
+
+  <script>
+    let latitude, longitude;
+
+    
+    navigator.geolocation.getCurrentPosition((pos) => {
+      latitude = pos.coords.latitude;
+      longitude = pos.coords.longitude;
+
+      document.getElementById("lat").textContent = "Latitude: " + latitude;
+      document.getElementById("lon").textContent = "Longitude: " + longitude;
+    });
+
+
+    document.getElementById("saveBtn").onclick = () => {
+      const locationData = {
+        lat: latitude,
+        lon: longitude
+      };
+
+      localStorage.setItem("myLocation", JSON.stringify(locationData));
+      document.getElementById("savedMsg").textContent = "Location Saved!";
+    };
+  </script>
+
+</body>
+</html>

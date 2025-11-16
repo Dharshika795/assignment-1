@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LocalStorage Example</title>
+</head>
+<body>
+
+  <h2>Store & Retrieve Data</h2>
+
+  <input type="text" id="name" placeholder="Enter your name">
+  <input type="text" id="course" placeholder="Enter your course">
+  <button onclick="saveData()">Save</button>
+
+  <h3>Stored Data:</h3>
+  <p id="showName"></p>
+  <p id="showCourse"></p>
+
+  <script>
+    // Save data in localStorage
+    function saveData() {
+      let name = document.getElementById("name").value;
+      let course = document.getElementById("course").value;
+
+      localStorage.setItem("myName", name);
+      localStorage.setItem("myCourse", course);
+
+      displayData(); // show saved data
+    }
+
+    // Display stored data on page
+    function displayData() {
+      document.getElementById("showName").textContent =
+        "Name: " + (localStorage.getItem("myName") || "");
+
+      document.getElementById("showCourse").textContent =
+        "Course: " + (localStorage.getItem("myCourse") || "");
+    }
+
+    // Load data when page reloads
+    window.onload = displayData;
+  </script>
+
+</body>
+</html>

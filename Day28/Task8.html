@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debug This Code Quiz</title>
+</head>
+<body>
+  <h2>Debug This Code – Find the Error!</h2>
+
+  <p><b>Buggy Code:</b></p>
+
+  <pre id="code">
+let x = 10
+console.log(x))   // Find the error!
+  </pre>
+
+  <button onclick="showAnswer()">Show Answer</button>
+
+  <p id="answer" style="color:green; font-weight:bold;"></p>
+
+  <script>
+    function showAnswer() {
+      document.getElementById("answer").textContent =
+        "Error: Extra ')' — Correct line is: console.log(x);";
+    }
+  </script>
+</body>
+</html>

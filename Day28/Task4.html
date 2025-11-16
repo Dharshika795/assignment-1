@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON LocalStorage Example</title>
+</head>
+<body>
+
+  <h2>JSON LocalStorage Demo</h2>
+  <p id="output"></p>
+
+  <script>
+
+    const student = {
+      name: "Dharshika",
+      course: "IT"
+    };
+
+    localStorage.setItem("studentData", JSON.stringify(student));
+
+    const savedData = localStorage.getItem("studentData");
+
+    const parsedData = JSON.parse(savedData);
+
+    document.getElementById("output").textContent =
+      `Name: ${parsedData.name}, Course: ${parsedData.course}`;
+  </script>
+
+</body>
+</html>

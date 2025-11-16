@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Time Logger</title>
+</head>
+<body>
+
+  <h2>Session Time Logger</h2>
+
+  <p><strong>Current Time:</strong> <span id="currentTime"></span></p>
+  <p><strong>Saved in SessionStorage:</strong> <span id="savedTime"></span></p>
+
+  <button onclick="saveSessionTime()">Save Current Time</button>
+
+  <script>
+    
+    function getCurrentTime() {
+      let now = new Date();
+
+      let timeString = 
+        now.getHours() + ":" +
+        now.getMinutes() + ":" +
+        now.getSeconds();
+
+      return timeString;
+    }
+
+    
+    function updateDisplayTime() {
+      document.getElementById("currentTime").textContent = getCurrentTime();
+    }
+
+      function saveSessionTime() {
+      let time = getCurrentTime();
+
+      
+      sessionStorage.setItem("session_time", time);
+
+      console.log("Saved session time:", time);
+
+    
+      showSavedTime();
+    }
+
+    
+    function showSavedTime() {
+      let saved = sessionStorage.getItem("session_time");
+
+      if (saved) {
+        document.getElementById("savedTime").textContent = saved;
+      } else {
+        document.getElementById("savedTime").textContent = "Nothing saved yet.";
+      }
+    }
+
+    
+    setInterval(updateDisplayTime, 1000);
+    showSavedTime();
+  </script>
+
+</body>
+</html>

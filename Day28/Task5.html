@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Console & Breakpoints Demo</title>
+</head>
+<body>
+  <h2>Open DevTools and see the Console Output</h2>
+  <button onclick="showData()">Click to Run Console Test</button>
+
+  <script>
+    function showData() {
+      
+      console.log("Button clicked! console.log() is working.");
+
+      let students = [
+        { name: "Dharshu", age: 20 },
+        { name: "Harini", age: 21 },
+        { name: "Aarthi", age: 22 }
+      ];
+      console.table(students);
+
+      debugger; 
+      console.log("Breakpoint passed.");
+    }
+  </script>
+</body>
+</html>
