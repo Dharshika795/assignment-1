@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--Modify the code to show your login and public_repos in HTML.-->
+<h2>GitHub User Info</h2>
+<p id="login"></p>
+<p id="repos"></p>
+
+<script>
+  fetch("https://api.github.com/users/octocat")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("login").innerText = "Login: " + data.login;
+      document.getElementById("repos").innerText = "Public Repos: " + data.public_repos;
+    });
+</script>
+
+</body>
+</html>

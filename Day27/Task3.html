@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile (Async/Await)</title>
+</head>
+<body>
+  <h2>GitHub Info</h2>
+
+  <p id="user"></p>
+  <p id="repoCount"></p>
+  <p id="msg" style="color: rgba(0, 102, 255, 0.853);"></p>
+
+  <script>
+    async function getData() {
+      try {
+        const url = "https://github.com/Dharshika795"; 
+        const res = await fetch(url);
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        const info = await res.json();
+
+        document.getElementById("user").innerText = "Login: " + info.login;
+        document.getElementById("repoCount").innerText = "Repos: " + info.public_repos;
+
+      } catch (err) {
+        document.getElementById("msg").innerText = "Error: " + err.message;
+      }
+    }
+
+    getData();
+  </script>
+</body>
+</html>

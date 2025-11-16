@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Followers Fetcher</title>
+</head>
+<body>
+
+  <h2>GitHub Followers</h2>
+
+  <input type="text" id="username" placeholder="Enter GitHub username">
+  <button onclick="getFollowers()">Get Followers</button>
+
+  <p id="error" style="color:red;"></p>
+  <ul id="followersList"></ul>
+
+  <script>
+    async function getFollowers() {
+      document.getElementById("error").textContent = "";
+      document.getElementById("followersList").innerHTML = "";
+
+      let user = document.getElementById("username").value;
+
+      try {
+        let response = await fetch(`https://api.github.com/users/${user}/followers`);
+
+        if (!response.ok) {
+          throw new Error("User not found");
+        }
+
+        let followers = await response.json();
+
+        // Show first followers
+        followers.forEach(f => {
+          let li = document.createElement("li");
+          li.textContent = f.login;
+          document.getElementById("followersList").appendChild(li);
+        });
+
+      } catch (err) {
+        document.getElementById("error").textContent = err.message;
+      }
+    }
+  </script>
+
+</body>
+</html>

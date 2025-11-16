@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Create a webpage that shows a GitHub user’s followers when a button is clicked.-->
+  <title>GitHub Followers</title>
+</head>
+<body>
+
+  <h2>Show GitHub Followers</h2>
+
+  <input type="text" id="username" placeholder="Enter GitHub Username">
+  <button onclick="getFollowers()">Get Followers</button>
+
+  <ul id="followersList"></ul>
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    async function getFollowers() {
+      const user = document.getElementById("username").value;
+      const list = document.getElementById("followersList");
+      const error = document.getElementById("error");
+
+      list.innerHTML = "";
+      error.textContent = "";
+
+      try {
+        let response = await fetch(`https://api.github.com/users/${user}/followers`);
+
+        if (!response.ok) {
+          throw new Error("User not found!");
+        }
+
+        let data = await response.json();
+
+        if (data.length === 0) {
+          list.innerHTML = "<li>No followers found</li>";
+          return;
+        }
+
+        data.forEach(follower => {
+          let li = document.createElement("li");
+          li.textContent = follower.login;
+          list.appendChild(li);
+        });
+
+      } catch (err) {
+        error.textContent = "Error: " + err.message;
+      }
+    }
+  </script>
+
+</body>
+</html>
