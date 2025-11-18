@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Toggle Example</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <button id="slideBtn">Slide Up / Down</button>
+
+    <br><br>
+
+    <div id="myBox" style="width:200px; height:100px; background:lightblue;">
+        This is a sliding box
+    </div>
+
+    <script>
+        $("#slideBtn").click(function(){
+            $("#myBox").slideToggle();  // Slides up if open, down if hidden
+        });
+    </script>
+
+</body>
+</html>

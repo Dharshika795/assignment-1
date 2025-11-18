@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Image</title>
+</head>
+<body>
+
+    <button onclick="toggleImage()">Show / Hide Image</button>
+
+    <br><br>
+
+    <img id="myImage" src="https://via.placeholder.com/200" style="display: block;">
+
+    <script>
+        function toggleImage() {
+            var img = document.getElementById("myImage");
+
+            if (img.style.display === "none") {
+                img.style.display = "block";   // Show image
+            } else {
+                img.style.display = "none";    // Hide image
+            }
+        }
+    </script>
+
+</body>
+</html>

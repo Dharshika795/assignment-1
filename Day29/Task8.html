@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Notification</title>
+</head>
+<body>
+
+    <button onclick="showNote()">Show Notification</button>
+
+    <div id="note">This is a notification!</div>
+
+    <script>
+        
+        var box = document.getElementById("note");
+        box.style.position = "relative";
+        box.style.top = "-60px";
+        box.style.display = "none";
+        box.style.transition = "top 0.4s";
+
+        function showNote() {
+            box.style.display = "block";     
+            setTimeout(function() {
+                box.style.top = "0px";       
+            }, 10);
+        }
+    </script>
+
+</body>
+</html>

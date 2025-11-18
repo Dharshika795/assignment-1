@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <h1>My Portfolio</h1>
+
+    <!-- Sections -->
+    <div class="section" style="display:none;">
+        <h2>About Me</h2>
+        <p>I am a developer who loves creating web projects.</p>
+    </div>
+
+    <div class="section" style="display:none;">
+        <h2>Projects</h2>
+        <p>Here are some of my best works.</p>
+    </div>
+
+    <div class="section" style="display:none;">
+        <h2>Contact</h2>
+        <p>Email: example@gmail.com</p>
+    </div>
+
+    <button id="revealBtn">Reveal Sections</button>
+
+    <script>
+        // Fade in all sections when button is clicked
+        $("#revealBtn").click(function () {
+            $(".section").each(function (i) {
+                $(this).delay(300 * i).fadeIn(600);
+            });
+        });
+
+        // Fade in sections when scrolled into view
+        $(window).on("scroll", function () {
+            $(".section").each(function () {
+                let top = $(this).offset().top;
+                let scroll = $(window).scrollTop() + $(window).height();
+
+                if (scroll > top + 50) {
+                    $(this).fadeIn(800);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

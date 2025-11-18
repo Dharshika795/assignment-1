@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Toggler</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Simple Quiz</h2>
+
+    <p>Q1: What is the capital of India?</p>
+
+    <button id="showAns">Show Answer</button>
+    <button id="hideAns">Hide Answer</button>
+
+    <p id="answer" style="display:none;">
+        Answer: New Delhi
+    </p>
+
+    <script>
+        $("#showAns").click(function () {
+            $("#answer").show();     
+        });
+
+        $("#hideAns").click(function () {
+            $("#answer").hide();     
+        });
+    </script>
+
+</body>
+</html>

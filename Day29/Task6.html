@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expandable Info Card</title>
+</head>
+<body>
+
+    <div onclick="toggleInfo()" id="card">
+        <h3>Click to Expand</h3>
+
+        <div id="content" style="display:none;">
+            This is the hidden information that appears when the card expands.
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var content = document.getElementById("content");
+
+            if (content.style.display === "none") {
+                content.style.display = "block";  
+            } else {
+                content.style.display = "none";   
+            }
+        }
+    </script>
+
+</body>
+</html>
