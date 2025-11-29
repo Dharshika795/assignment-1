@@ -43,7 +43,7 @@ insert into employee(emp_id,emp_name,emp_age) values (1,"Dharshi",22)
 insert into employee(emp_id,emp_name,emp_age) values (2,"Dharshi",21)
 insert into employee(emp_id,emp_name,emp_age) values (3,"Dharshi",23)
 insert into employee(emp_id,emp_name,emp_age) values (4,"Dharshi",28)
-select student.stu_name,student.stu_age,employee.emp_name,employee.emp_age from student join employee on student.stu_id =  employee.emp_id;
+select student.stu_name,student.stu_age,employee.emp_name,employee.emp_age from student join employee on student.stu_id =  employee.emp_id-
 
 
 
